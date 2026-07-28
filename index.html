@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈昕慧 &mdash; 个人网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="image" href="images/backgrounds/fast/portal.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="images/backgrounds/fast/education.jpg">
+    <link rel="preload" as="image" href="images/backgrounds/experience-original.png">
+    <link rel="preload" as="image" href="images/backgrounds/fast/projects.jpg">
+    <link rel="preload" as="image" href="images/backgrounds/campus-original.png">
+    <link rel="preload" as="image" href="images/backgrounds/fast/life.jpg">
+
+    <!-- Serif fonts: Noto Serif SC + Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="?view=all#hero" class="nav-logo" data-zh="陈昕慧" data-en="Chen Xinhui">陈昕慧</a>
+            <ul class="nav-links">
+                <li><a href="?view=all#hero" data-zh="全部" data-en="All">全部</a></li>
+                <li><a href="?view=education#about" data-zh="教育" data-en="Education">教育</a></li>
+                <li><a href="?view=experience#experience" data-zh="实习" data-en="Internships">实习</a></li>
+                <li><a href="?view=projects#projects" data-zh="项目" data-en="Projects">项目</a></li>
+                <li><a href="?view=campus#campus" data-zh="校园" data-en="Campus">校园</a></li>
+                <li><a href="?view=life#life" data-zh="生活" data-en="Life">生活</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="language-switch" type="button" aria-label="切换为英文">EN</button>
+                <button class="nav-toggle" aria-label="打开导航">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <a class="module-return" href="?view=all#hero">
+        <span aria-hidden="true">←</span>
+        <span data-zh="浏览全部" data-en="Browse all">浏览全部</span>
+    </a>
+
+   <!-- Hero Section -->
+   <section id="hero" class="hero">
+        <div class="hero-breath hero-breath-one" aria-hidden="true"></div>
+        <div class="hero-breath hero-breath-two" aria-hidden="true"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span data-zh="你好呀 👋" data-en="HELLO 👋">你好呀 👋</span>
+                        <span data-zh="我是陈昕慧～" data-en="I'M CHEN XINHUI.">我是陈昕慧～</span>
+                    </h1>
+                    <p class="hero-manifesto"
+                       data-zh="选择浏览全部，或从你感兴趣的一部分开始。"
+                       data-en="Browse everything, or begin with the part that interests you.">选择浏览全部，或从你感兴趣的一部分开始。</p>
+                    <div class="hero-contact">
+                        <a href="tel:15060718330" class="contact-link">15060718330</a>
+                        <span class="contact-divider" aria-hidden="true"></span>
+                        <a href="mailto:599409315@qq.com" class="contact-link">599409315@qq.com</a>
+                    </div>
+                </div>
+
+                <figure class="hero-gallery" data-carousel>
+                    <div class="photo-carousel">
+                        <div class="photo-slide is-active" aria-hidden="false">
+                            <img class="life-photo life-photo-bridal" src="images/gallery/bridal-cake.webp" alt="陈昕慧的白色婚纱写真">
+                        </div>
+                        <div class="photo-slide" aria-hidden="true">
+                            <img class="life-photo life-photo-tulips" src="images/gallery/tulips.webp" alt="陈昕慧在郁金香花丛中的生活照">
+                        </div>
+                        <div class="photo-slide" aria-hidden="true">
+                            <img class="life-photo life-photo-waterfront" src="images/gallery/waterfront.webp" alt="陈昕慧在水岸边的旅行照">
+                        </div>
+                        <div class="photo-slide" aria-hidden="true">
+                            <img class="life-photo life-photo-stairs" src="images/gallery/portrait-stairs.webp" alt="陈昕慧在楼梯旁的生活照">
+                        </div>
+                        <div class="photo-slide" aria-hidden="true">
+                            <img class="life-photo life-photo-bears" src="images/gallery/bridal-bears.webp" alt="陈昕慧与玩偶的白色婚纱写真">
+                        </div>
+                        <div class="photo-slide" aria-hidden="true">
+                            <img class="life-photo life-photo-hat" src="images/gallery/portrait-hat.webp" alt="陈昕慧戴草帽的写真">
+                        </div>
+                        <button class="carousel-arrow carousel-prev" type="button" aria-label="上一张">←</button>
+                        <button class="carousel-arrow carousel-next" type="button" aria-label="下一张">→</button>
+                    </div>
+                    <figcaption>
+                        <span data-zh="生活照片" data-en="LIFE IN FRAMES">生活照片</span>
+                        <div class="carousel-dots" aria-label="选择照片">
+                            <button class="carousel-dot is-active" type="button" aria-label="第 1 张"></button>
+                            <button class="carousel-dot" type="button" aria-label="第 2 张"></button>
+                            <button class="carousel-dot" type="button" aria-label="第 3 张"></button>
+                            <button class="carousel-dot" type="button" aria-label="第 4 张"></button>
+                            <button class="carousel-dot" type="button" aria-label="第 5 张"></button>
+                            <button class="carousel-dot" type="button" aria-label="第 6 张"></button>
+                        </div>
+                        <span class="carousel-counter">01 / 06</span>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="module-portal" aria-label="选择浏览方式">
+                <a class="module-card module-card-all" href="?view=all#about">
+                    <span class="module-index">00</span>
+                    <strong data-zh="浏览全部" data-en="Browse all">浏览全部</strong>
+                    <small data-zh="按顺序认识我" data-en="The complete story">按顺序认识我</small>
+                </a>
+                <a class="module-card" href="?view=education#about">
+                    <span class="module-index">01</span>
+                    <strong data-zh="教育与能力" data-en="Education">教育与能力</strong>
+                    <small data-zh="学习背景、荣誉与技能" data-en="Study, honors and skills">学习背景、荣誉与技能</small>
+                </a>
+                <a class="module-card" href="?view=experience#experience">
+                    <span class="module-index">02</span>
+                    <strong data-zh="实习" data-en="Internships">实习</strong>
+                    <small data-zh="如何把想法推进成产品" data-en="Turning ideas into products">如何把想法推进成产品</small>
+                </a>
+                <a class="module-card" href="?view=projects#projects">
+                    <span class="module-index">03</span>
+                    <strong data-zh="项目" data-en="Projects">项目</strong>
+                    <small data-zh="咨询、创赛与产品实践" data-en="Consulting, ventures and products">咨询、创赛与产品实践</small>
+                </a>
+                <a class="module-card" href="?view=campus#campus">
+                    <span class="module-index">04</span>
+                    <strong data-zh="校园" data-en="Campus">校园</strong>
+                    <small data-zh="组织、内容与协作" data-en="Operations, content and teamwork">组织、内容与协作</small>
+                </a>
+                <a class="module-card" href="?view=life#life">
+                    <span class="module-index">05</span>
+                    <strong data-zh="生活" data-en="Life">生活</strong>
+                    <small data-zh="旅途、照片和沿途片段" data-en="Travel, photos and moments">旅途、照片和沿途片段</small>
+                </a>
+            </div>
+        </div>
+
+        <a class="scroll-cue" href="?view=all#about" aria-label="向下浏览">
+            <span data-zh="向下浏览" data-en="SCROLL">向下浏览</span>
+            <i aria-hidden="true"></i>
+        </a>
+    </section>
+    <div class="section-pager" aria-label="左右切换页面">
+        <button class="section-page-prev" type="button" aria-label="上一页">←</button>
+        <span class="section-page-count">01 / 06</span>
+        <button class="section-page-next" type="button" aria-label="下一页">→</button>
+    </div>
+
+    <!-- Life & Travel Section -->
+    <section id="life" class="section life-section">
+        <div class="container">
+            <div class="life-heading">
+                <div>
+                    <span class="life-kicker" data-zh="去过的地方，慢慢补完" data-en="PLACES VISITED, STORIES TO COME">去过的地方，慢慢补完</span>
+                    <h2 class="section-title life-title" data-zh="旅途与生活" data-en="Travel &amp; Life">旅途与生活</h2>
+                </div>
+                <p data-zh="先把去过的地方留在这里。照片、食物和途中发生的小事，以后再慢慢填进来。"
+                   data-en="A place to remember where I have been. Photos, food and small moments from each journey will be added over time.">先把去过的地方留在这里。照片、食物和途中发生的小事，以后再慢慢填进来。</p>
+            </div>
+            <div class="travel-grid">
+                <article class="travel-card travel-card-medium fade-in">
+                    <span class="travel-index">01</span>
+                    <div>
+                        <h3 data-zh="南京" data-en="Nanjing">南京</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card fade-in">
+                    <span class="travel-index">02</span>
+                    <div>
+                        <h3 data-zh="苏州" data-en="Suzhou">苏州</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card fade-in">
+                    <span class="travel-index">03</span>
+                    <div>
+                        <h3 data-zh="无锡" data-en="Wuxi">无锡</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card travel-card-medium fade-in">
+                    <span class="travel-index">04</span>
+                    <div>
+                        <h3 data-zh="云南" data-en="Yunnan">云南</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card fade-in">
+                    <span class="travel-index">05</span>
+                    <div>
+                        <h3 data-zh="北京" data-en="Beijing">北京</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card fade-in">
+                    <span class="travel-index">06</span>
+                    <div>
+                        <h3 data-zh="上海" data-en="Shanghai">上海</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card travel-card-abroad travel-card-medium fade-in">
+                    <span class="travel-index">07</span>
+                    <div>
+                        <h3 data-zh="英国" data-en="United Kingdom">英国</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card travel-card-hero fade-in">
+                    <span class="travel-index">08</span>
+                    <div>
+                        <h3 data-zh="厦门" data-en="Xiamen">厦门</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card travel-card-hero fade-in">
+                    <span class="travel-index">09</span>
+                    <div>
+                        <h3 data-zh="杭州" data-en="Hangzhou">杭州</h3>
+                        <p data-zh="旅行内容待补充" data-en="Travel notes to come">旅行内容待补充</p>
+                    </div>
+                    <span class="travel-state" data-zh="待续" data-en="SOON">待续</span>
+                </article>
+                <article class="travel-card travel-card-teaching travel-card-medium fade-in">
+                    <span class="travel-index">10</span>
+                    <div>
+                        <h3 data-zh="温州" data-en="Wenzhou">温州</h3>
+                        <p data-zh="在洞头给孩子们上心理与梦想课，也担任班主任；课堂之外参与人才地图、企业访谈与地方调研。"
+                           data-en="In Dongtou, I taught psychology and dream-building classes, served as a homeroom teacher, and joined local talent mapping and field interviews.">在洞头给孩子们上心理与梦想课，也担任班主任；课堂之外参与人才地图、企业访谈与地方调研。</p>
+                        <a class="travel-link" href="https://mp.weixin.qq.com/s/LUZ4HrfRs6mMGzLQPEU_XA" target="_blank" rel="noopener noreferrer"
+                           data-zh="查看支教课程记录 ↗" data-en="View the teaching story ↗">查看支教课程记录 ↗</a>
+                    </div>
+                    <span class="travel-state" data-zh="支教" data-en="TEACHING">支教</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-zh="教育背景" data-en="Education">教育背景</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+            <div class="education-card fade-in">
+                <div class="edu-header">
+                    <div>
+                        <h3 class="edu-school" data-zh="浙江大学" data-en="Zhejiang University">浙江大学</h3>
+                        <p class="edu-major" data-zh="经济学 · 本科" data-en="Economics · Bachelor's Degree">经济学 &middot; 本科</p>
+                    </div>
+                    <span class="edu-date">2024.09 — 2028.06</span>
+                </div>
+                <div class="edu-details">
+                    <div class="edu-stat">
+                        <span class="stat-label">GPA</span>
+                        <span class="stat-value">4.18 / 5.0</span>
+                    </div>
+                    <div class="edu-stat">
+                        <span class="stat-label" data-zh="排名" data-en="Ranking">排名</span>
+                        <span class="stat-value">Top 20%</span>
+                    </div>
+                </div>
+                <div class="edu-courses">
+                    <span class="course-tag" data-zh="微观经济学" data-en="Microeconomics">微观经济学</span>
+                    <span class="course-tag" data-zh="宏观经济学" data-en="Macroeconomics">宏观经济学</span>
+                    <span class="course-tag" data-zh="计量经济学" data-en="Econometrics">计量经济学</span>
+                    <span class="course-tag" data-zh="金融学" data-en="Finance">金融学</span>
+                    <span class="course-tag" data-zh="会计学" data-en="Accounting">会计学</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-zh="实习经历" data-en="Experience">实习经历</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <div class="timeline">
+                <div class="timeline-card fade-in">
+                    <div class="card-header">
+                        <div class="card-company">
+                            <h3>
+                                <a class="project-site-link" href="https://www.aiselectioncenter.com" target="_blank" rel="noopener noreferrer">
+                                    <span data-zh="AI 好物网 — NeuraPick" data-en="AI Selection Center — NeuraPick">AI 好物网 &mdash; NeuraPick</span>
+                                    <span class="external-mark" aria-hidden="true">↗</span>
+                                </a>
+                            </h3>
+                            <span class="company-name" data-zh="天玑云科（深圳）创新科技有限公司" data-en="Tianji Yunke (Shenzhen) Innovation Technology Co., Ltd.">天玑云科（深圳）创新科技有限公司</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="role" data-zh="产品实习生" data-en="Product Intern">产品实习生</span>
+                            <span class="period" data-zh="2026.06 — 至今" data-en="2026.06 — Present">2026.06 &mdash; 至今</span>
+                        </div>
+                    </div>
+                    <div class="experience-layout">
+                        <a class="site-preview" href="https://www.aiselectioncenter.com" target="_blank" rel="noopener noreferrer">
+                            <span class="site-preview-image">
+                                <img src="images/sites/ai-selection-center.png" alt="AI 好物网完整首页预览" loading="lazy">
+                            </span>
+                            <span class="site-preview-footer">
+                                <span>
+                                    <strong data-zh="看看我参与搭建的网站" data-en="Explore the product I helped build">看看我参与搭建的网站</strong>
+                                    <small>aiselectioncenter.com</small>
+                                </span>
+                                <span class="site-visit-button">
+                                    <span data-zh="访问网站" data-en="Visit website">访问网站</span>
+                                    <span aria-hidden="true">↗</span>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="experience-copy">
+                            <p class="project-kicker" data-zh="用 AI 重构跨境选品" data-en="Reimagining cross-border product discovery with AI">用 AI 重构跨境选品</p>
+                            <p class="project-lede" data-zh="我参与从 0 到 1 搭建一个多语言选品与分销平台：让买家更快找到合适的商品，也让代理、支付和佣金结算真正形成闭环。" data-en="I helped build a multilingual product-discovery and distribution platform from zero to one—making it easier for buyers to choose, while connecting agents, payments and commission settlement into one workable system.">我参与从 0 到 1 搭建一个多语言选品与分销平台：让买家更快找到合适的商品，也让代理、支付和佣金结算真正形成闭环。</p>
+                            <div class="project-metrics" aria-label="项目关键成果">
+                                <span class="story-metric"><strong>4</strong><small data-zh="种语言" data-en="languages">种语言</small></span>
+                                <span class="story-metric"><strong>4</strong><small data-zh="种支付方式" data-en="payment methods">种支付方式</small></span>
+                                <span class="story-metric"><strong>6</strong><small data-zh="轮原型迭代" data-en="prototype rounds">轮原型迭代</small></span>
+                            </div>
+                            <details class="project-story" open>
+                                <summary>
+                                    <span data-zh="项目故事" data-en="Project story">项目故事</span>
+                                    <span class="story-arrow" aria-hidden="true">＋</span>
+                                </summary>
+                                <div class="story-grid">
+                                    <section class="story-block">
+                                        <h4 data-zh="我先解决什么" data-en="The problem I started with">我先解决什么</h4>
+                                        <p data-zh="跨境交易真正难的并不只是“把商品放上网”，而是选品信息不对称、多语言售前成本高，以及分销关系难追踪。我从买家、代理与运营三方重新梳理了产品路径。" data-en="The hard part of cross-border commerce is not merely listing products. It is the combination of information asymmetry, expensive multilingual pre-sales support and difficult affiliate attribution. I remapped the journey across buyers, agents and operators.">跨境交易真正难的并不只是“把商品放上网”，而是选品信息不对称、多语言售前成本高，以及分销关系难追踪。我从买家、代理与运营三方重新梳理了产品路径。</p>
+                                    </section>
+                                    <section class="story-block">
+                                        <h4 data-zh="我做出的关键判断" data-en="The key product decision">我做出的关键判断</h4>
+                                        <p data-zh="小额商品适合直接支付，大额设备更需要询价与销售跟进。于是我没有强行统一交易流程，而是设计“小额支付 × 大额询价”的双路径，在体验、开发成本与商业风险之间取得平衡。" data-en="Small purchases work best with direct checkout, while high-value equipment needs quotations and sales follow-up. Rather than forcing one transaction flow, I designed a dual path for direct payment and larger enquiries, balancing experience, development cost and commercial risk.">小额商品适合直接支付，大额设备更需要询价与销售跟进。于是我没有强行统一交易流程，而是设计“小额支付 × 大额询价”的双路径，在体验、开发成本与商业风险之间取得平衡。</p>
+                                    </section>
+                                    <section class="story-block story-block-wide">
+                                        <h4 data-zh="如何把它推成结果" data-en="How I moved it toward delivery">如何把它推成结果</h4>
+                                        <p data-zh="我完成竞品研究、角色矩阵与关键业务流程设计，重构访客、普通代理、子站代理和管理员四类权限，并规划 Stripe、支付宝、微信与线下二维码支付。Lovable 是我用来快速搭建和验证可交互原型的工具；我的重点是需求判断、流程设计、PRD 与 6 轮迭代验证，而不是把平台生成的代码量当作成果。" data-en="I completed competitor research, a role matrix and the key business flows, redesigning permissions for visitors, standard agents, sub-site agents and administrators while planning Stripe, Alipay, WeChat Pay and offline QR payments. I used Lovable to build and test an interactive prototype quickly; my contribution centred on product judgement, flow design, PRDs and six validation rounds rather than treating platform-generated code volume as an outcome.">我完成竞品研究、角色矩阵与关键业务流程设计，重构访客、普通代理、子站代理和管理员四类权限，并规划 Stripe、支付宝、微信与线下二维码支付。Lovable 是我用来快速搭建和验证可交互原型的工具；我的重点是需求判断、流程设计、PRD 与 6 轮迭代验证，而不是把平台生成的代码量当作成果。</p>
+                                    </section>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-card fade-in">
+                    <div class="card-header">
+                        <div class="card-company">
+                            <h3>
+                                <a class="project-site-link" href="https://museum.hotaiapp.com" target="_blank" rel="noopener noreferrer">
+                                    <span data-zh="Linkly 数字博物馆" data-en="Linkly Digital Museum">Linkly 数字博物馆</span>
+                                    <span class="external-mark" aria-hidden="true">↗</span>
+                                </a>
+                            </h3>
+                            <span class="company-name" data-zh="天玑云科（深圳）创新科技有限公司" data-en="Tianji Yunke (Shenzhen) Innovation Technology Co., Ltd.">天玑云科（深圳）创新科技有限公司</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="role" data-zh="产品实习生" data-en="Product Intern">产品实习生</span>
+                            <span class="period">2026.05 &ndash; 2026.06</span>
+                        </div>
+                    </div>
+                    <div class="experience-layout">
+                        <a class="site-preview" href="https://museum.hotaiapp.com" target="_blank" rel="noopener noreferrer">
+                            <span class="site-preview-image site-preview-image-museum">
+                                <img src="images/sites/linkly-museum.png" alt="Linkly 数字博物馆完整首页预览" loading="lazy">
+                            </span>
+                            <span class="site-preview-footer">
+                                <span>
+                                    <strong data-zh="进入数字博物馆体验" data-en="Step inside the digital museum">进入数字博物馆体验</strong>
+                                    <small>museum.hotaiapp.com</small>
+                                </span>
+                                <span class="site-visit-button">
+                                    <span data-zh="访问网站" data-en="Visit website">访问网站</span>
+                                    <span aria-hidden="true">↗</span>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="experience-copy">
+                            <p class="project-kicker" data-zh="让文物开口说话" data-en="Giving artifacts a voice">让文物开口说话</p>
+                            <p class="project-lede" data-zh="Linkly 把 NFC 实体文物卡与移动端 Web App 连在一起。游客碰一碰卡片，就能继续听文物讲故事、对话、收藏与分享，让一次参观变成可以延续的关系。" data-en="Linkly connects NFC-enabled artifact cards with a mobile Web App. A tap lets visitors hear an artifact’s story, talk with it, collect it and share it—turning a one-off museum visit into an ongoing relationship.">Linkly 把 NFC 实体文物卡与移动端 Web App 连在一起。游客碰一碰卡片，就能继续听文物讲故事、对话、收藏与分享，让一次参观变成可以延续的关系。</p>
+                            <div class="project-metrics" aria-label="项目关键成果">
+                                <span class="story-metric"><strong>20</strong><small data-zh="家博物馆资料" data-en="museum sources">家博物馆资料</small></span>
+                                <span class="story-metric"><strong>400</strong><small data-zh="件文物种子资料" data-en="artifact records">件文物种子资料</small></span>
+                                <span class="story-metric"><strong>30</strong><small data-zh="轮原型迭代" data-en="prototype rounds">轮原型迭代</small></span>
+                            </div>
+                            <details class="project-story" open>
+                                <summary>
+                                    <span data-zh="项目故事" data-en="Project story">项目故事</span>
+                                    <span class="story-arrow" aria-hidden="true">＋</span>
+                                </summary>
+                                <div class="story-grid">
+                                    <section class="story-block">
+                                        <h4 data-zh="为什么做它" data-en="Why this product">为什么做它</h4>
+                                        <p data-zh="博物馆通常在游客离馆后就失去了联系，文创商品也很难持续带来互动与复购。我从游客、馆方与平台三方需求出发，把实体卡购买、数字内容访问、收藏分享和二次触达串成完整链路。" data-en="Museums usually lose contact with visitors once they leave, and cultural merchandise rarely creates sustained engagement. Starting from visitor, museum and platform needs, I connected physical-card purchases, digital access, collection, sharing and re-engagement into one journey.">博物馆通常在游客离馆后就失去了联系，文创商品也很难持续带来互动与复购。我从游客、馆方与平台三方需求出发，把实体卡购买、数字内容访问、收藏分享和二次触达串成完整链路。</p>
+                                    </section>
+                                    <section class="story-block">
+                                        <h4 data-zh="我坚持的产品边界" data-en="The boundary I chose">我坚持的产品边界</h4>
+                                        <p data-zh="AI 文物不需要“什么都知道”，而要在可信范围内讲对故事。我用 20 家博物馆、400 件文物的种子资料建立知识边界与兜底话术；同时设计语音缓存，让情绪化 TTS 的重复生成成本降低约 30%。" data-en="An AI artifact does not need to know everything—it needs to tell the right story within trusted boundaries. I defined knowledge and fallback rules using seed data from 20 museums and 400 artifacts, and designed voice caching that reduced repeated emotion-aware TTS generation costs by about 30%.">AI 文物不需要“什么都知道”，而要在可信范围内讲对故事。我用 20 家博物馆、400 件文物的种子资料建立知识边界与兜底话术；同时设计语音缓存，让情绪化 TTS 的重复生成成本降低约 30%。</p>
+                                    </section>
+                                    <section class="story-block story-block-wide">
+                                        <h4 data-zh="从体验到系统" data-en="From experience to system">从体验到系统</h4>
+                                        <p data-zh="我负责卡片绑定、碰卡唤起、礼赠激活、定制卡与馆方履约等关键流程，并用 Lovable 快速搭建可交互原型，在约 30 轮迭代中验证体验与业务闭环。项目最终形成多份 PRD、功能审计方案与 18 页 Web Deck。" data-en="I designed the core flows for card binding, tap-to-open, gifting, activation, custom cards and museum fulfilment. Lovable helped me build an interactive prototype quickly, which I used across roughly 30 iterations to validate the experience and business loop. The work resulted in multiple PRDs, a feature-audit plan and an 18-page Web Deck.">我负责卡片绑定、碰卡唤起、礼赠激活、定制卡与馆方履约等关键流程，并用 Lovable 快速搭建可交互原型，在约 30 轮迭代中验证体验与业务闭环。项目最终形成多份 PRD、功能审计方案与 18 页 Web Deck。</p>
+                                    </section>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-card fade-in">
+                    <div class="card-header">
+                        <div class="card-company">
+                            <h3 data-zh="Honeytry 蜜凑 · 微信小程序" data-en="Honeytry · WeChat Mini Program">Honeytry 蜜凑 &middot; 微信小程序</h3>
+                            <span class="company-name" data-zh="杭州试派信息技术有限公司" data-en="Hangzhou Shipai Information Technology Co., Ltd.">杭州试派信息技术有限公司</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="role" data-zh="产品运营实习生" data-en="Product Operations Intern">产品运营实习生</span>
+                            <span class="period" data-zh="2026.03 — 2026.05" data-en="2026.03 — 2026.05">2026.03 &mdash; 2026.05</span>
+                        </div>
+                    </div>
+                    <div class="standalone-story">
+                        <p class="project-kicker" data-zh="在 1000 元预算内，验证一个社区的真实性命题" data-en="Testing a community’s trust proposition on a RMB 1,000 budget">在 1000 元预算内，验证一个社区的真实性命题</p>
+                        <p class="project-lede" data-zh="Honeytry 是一个基于校园 LBS 的真实互助社区。比起急着做增长，我更在意先回答：陌生人为什么愿意相信这里的内容？" data-en="Honeytry is a campus LBS community built around authentic mutual help. Before chasing growth, I focused on a more fundamental question: why should strangers trust what they see here?">Honeytry 是一个基于校园 LBS 的真实互助社区。比起急着做增长，我更在意先回答：陌生人为什么愿意相信这里的内容？</p>
+                        <div class="project-metrics" aria-label="项目关键成果">
+                            <span class="story-metric"><strong>200+</strong><small data-zh="首周用户" data-en="week-one users">首周用户</small></span>
+                            <span class="story-metric"><strong>150+</strong><small data-zh="优质内容" data-en="quality posts">优质内容</small></span>
+                            <span class="story-metric"><strong>500+</strong><small data-zh="首月新增" data-en="first-month users">首月新增</small></span>
+                        </div>
+                        <details class="project-story" open>
+                            <summary>
+                                <span data-zh="项目故事" data-en="Project story">项目故事</span>
+                                <span class="story-arrow" aria-hidden="true">＋</span>
+                            </summary>
+                            <div class="story-grid story-grid-three">
+                                <section class="story-block">
+                                    <h4 data-zh="先处理信任" data-en="Trust before growth">先处理信任</h4>
+                                    <p data-zh="校园内容常被广告、失真信息和模糊定位淹没。我提出信任分、举报机制、内容识别和激励体系，并划出商业内容专区，让真实内容不必和广告混在一起。" data-en="Campus content is often crowded out by ads, unreliable posts and vague location signals. I proposed trust scores, reporting, content detection, incentives and a separate commercial area so authentic content would not compete with advertising.">校园内容常被广告、失真信息和模糊定位淹没。我提出信任分、举报机制、内容识别和激励体系，并划出商业内容专区，让真实内容不必和广告混在一起。</p>
+                                </section>
+                                <section class="story-block">
+                                    <h4 data-zh="低成本冷启动" data-en="A lean launch">低成本冷启动</h4>
+                                    <p data-zh="在不超过 1000 元的预算里，我把拉新、内容种子、社群维护和反馈收集组合成一套启动方案，一周获得 200+ 用户与 150+ 条优质内容。" data-en="With a budget under RMB 1,000, I combined acquisition, seed content, community care and feedback collection into one launch plan, bringing in 200+ users and 150+ quality posts in the first week.">在不超过 1000 元的预算里，我把拉新、内容种子、社群维护和反馈收集组合成一套启动方案，一周获得 200+ 用户与 150+ 条优质内容。</p>
+                                </section>
+                                <section class="story-block">
+                                    <h4 data-zh="把偶然变成方法" data-en="Turning traction into a system">把偶然变成方法</h4>
+                                    <p data-zh="首月新增超过 500 人后，我继续搭建垂直社群和运营 SOP，希望让增长不只依赖一次活动，而是沉淀为可以复用的社区机制。" data-en="After first-month growth passed 500 users, I developed vertical communities and operating SOPs so traction would come from a repeatable community system rather than a one-off campaign.">首月新增超过 500 人后，我继续搭建垂直社群和运营 SOP，希望让增长不只依赖一次活动，而是沉淀为可以复用的社区机制。</p>
+                                </section>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-zh="项目经历" data-en="Projects">项目经历</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-tags">
+                        <span class="tag-sm">ESG</span>
+                        <span class="tag-sm" data-zh="咨询" data-en="Consulting">咨询</span>
+                    </div>
+                    <h3 class="project-title" data-zh="毕马威 ESG 案例分析大赛" data-en="KPMG ESG Case Competition">毕马威 ESG 案例分析大赛</h3>
+                    <p class="project-subtitle">
+                        <span data-zh="供应链减碳解决方案 · 团队协作" data-en="Supply-chain Decarbonization · Team Collaboration">供应链减碳解决方案 &middot; 团队协作</span>
+                        <span class="project-time">2025.10 &mdash; 2025.11</span>
+                    </p>
+                    <p class="project-lede" data-zh="一家时尚公司超过 90% 的碳排放来自供应链。我们要做的不是再写一份倡议，而是设计一套供应商愿意参与、企业能够执行的减碳机制。" data-en="More than 90% of a fashion company’s emissions can sit in its supply chain. Our challenge was not to write another pledge, but to design a decarbonization mechanism suppliers would join and the business could actually run.">一家时尚公司超过 90% 的碳排放来自供应链。我们要做的不是再写一份倡议，而是设计一套供应商愿意参与、企业能够执行的减碳机制。</p>
+                    <button class="deck-preview" type="button" data-deck="kpmg" aria-haspopup="dialog">
+                        <span class="deck-preview-image">
+                            <img src="images/decks/kpmg/slide-01.webp" alt="毕马威 ESG 方案封面" loading="lazy">
+                            <span class="deck-page-badge" data-zh="共 12 页" data-en="12 pages">共 12 页</span>
+                        </span>
+                        <span class="deck-preview-action">
+                            <span>
+                                <small data-zh="完整方案材料" data-en="Full presentation">完整方案材料</small>
+                                <strong data-zh="在线翻阅毕马威方案" data-en="Open the KPMG deck">在线翻阅毕马威方案</strong>
+                            </span>
+                            <span class="deck-open-pill">
+                                <span data-zh="点击查看" data-en="View deck">点击查看</span>
+                                <span aria-hidden="true">→</span>
+                            </span>
+                        </span>
+                    </button>
+                    <details class="project-story" open>
+                        <summary>
+                            <span data-zh="这套方案是怎么想出来的" data-en="How we built the solution">这套方案是怎么想出来的</span>
+                            <span class="story-arrow" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="story-grid">
+                            <section class="story-block">
+                                <h4 data-zh="从信息里找结构" data-en="Finding structure in complexity">从信息里找结构</h4>
+                                <p data-zh="团队共同梳理中国、欧盟与香港的披露要求，并研究 H&amp;M、Inditex 等企业的 Scope 3 实践，把复杂信息收束为准入、数据、能力和激励三类核心问题。" data-en="Our team reviewed disclosure requirements across China, the EU and Hong Kong, alongside Scope 3 practices at H&amp;M and Inditex, reducing a broad problem into three themes: entry standards, data and capability incentives.">团队共同梳理中国、欧盟与香港的披露要求，并研究 H&amp;M、Inditex 等企业的 Scope 3 实践，把复杂信息收束为准入、数据、能力和激励三类核心问题。</p>
+                            </section>
+                            <section class="story-block">
+                                <h4 data-zh="让方案能落地" data-en="Designing for implementation">让方案能落地</h4>
+                                <p data-zh="我们用 TOPSIS 建立供应商评估逻辑，再设计“准入评估—分层管理—协同创新—绿色采购激励”的参与机制，并将落地拆成基线摸底、数字化管理与全面挂钩三个阶段。" data-en="We used TOPSIS to structure supplier assessment, then designed an engagement mechanism spanning entry assessment, tiered management, collaborative innovation and green-procurement incentives, with a three-stage roadmap from baselining to digital management and full linkage.">我们用 TOPSIS 建立供应商评估逻辑，再设计“准入评估—分层管理—协同创新—绿色采购激励”的参与机制，并将落地拆成基线摸底、数字化管理与全面挂钩三个阶段。</p>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-tags">
+                        <span class="tag-sm" data-zh="创赛" data-en="Competition">创赛</span>
+                        <span class="tag-sm" data-zh="硬科技商业孵化" data-en="Deep-tech Incubation">硬科技商业孵化</span>
+                    </div>
+                    <h3 class="project-title" data-zh="ColdNova 辐射制冷头盔商业孵化" data-en="ColdNova Radiative-Cooling Helmet">ColdNova 辐射制冷头盔商业孵化</h3>
+                    <p class="project-subtitle">
+                        <span data-zh="总负责人、商业负责人" data-en="Project &amp; Business Lead">总负责人、商业负责人</span>
+                        <span class="project-time" data-zh="2026.02 — 至今" data-en="2026.02 — Present">2026.02 &mdash; 至今</span>
+                    </p>
+                    <p class="project-lede" data-zh="我们尝试用一层无需供电的辐射制冷材料，让普通头盔在 5 分钟内完成升级，并在户外环境中实现 5–13℃ 的被动降温。" data-en="We use a zero-energy radiative-cooling material to upgrade an ordinary helmet in five minutes and deliver 5–13°C of passive cooling outdoors.">我们尝试用一层无需供电的辐射制冷材料，让普通头盔在 5 分钟内完成升级，并在户外环境中实现 5–13℃ 的被动降温。</p>
+                    <button class="deck-preview" type="button" data-deck="coldnova" aria-haspopup="dialog">
+                        <span class="deck-preview-image">
+                            <img src="images/decks/coldnova/slide-01.webp" alt="ColdNova 路演材料封面" loading="lazy">
+                            <span class="deck-page-badge" data-zh="共 20 页" data-en="20 pages">共 20 页</span>
+                        </span>
+                        <span class="deck-preview-action">
+                            <span>
+                                <small data-zh="完整路演材料" data-en="Full pitch deck">完整路演材料</small>
+                                <strong data-zh="在线翻阅 ColdNova 路演稿" data-en="Open the ColdNova pitch deck">在线翻阅 ColdNova 路演稿</strong>
+                            </span>
+                            <span class="deck-open-pill">
+                                <span data-zh="点击查看" data-en="View deck">点击查看</span>
+                                <span aria-hidden="true">→</span>
+                            </span>
+                        </span>
+                    </button>
+                    <div class="project-metrics">
+                        <span class="story-metric"><strong>600+</strong><small data-zh="用户调研" data-en="users surveyed">用户调研</small></span>
+                        <span class="story-metric"><strong>45%</strong><small data-zh="强需求" data-en="strong need">强需求</small></span>
+                        <span class="story-metric"><strong>50+</strong><small data-zh="实景测试" data-en="field tests">实景测试</small></span>
+                    </div>
+                    <details class="project-story" open>
+                        <summary>
+                            <span data-zh="从实验室走向市场" data-en="From lab work to market">从实验室走向市场</span>
+                            <span class="story-arrow" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="story-grid">
+                            <section class="story-block">
+                                <h4 data-zh="不是只证明“热”" data-en="Going beyond the obvious pain point">不是只证明“热”</h4>
+                                <p data-zh="头盔内部超过 55℃ 的确是痛点，但“觉得热”不等于愿意付费。于是我把 600+ 份调研继续拆到强需求与支付意愿，最终识别出 82.09% 的痛点覆盖率与 45% 的强需求人群。" data-en="Helmet interiors exceeding 55°C is clearly painful, but feeling hot does not equal willingness to pay. I took 600+ responses further into need strength and payment intent, identifying 82.09% pain-point incidence and a 45% strong-need segment.">头盔内部超过 55℃ 的确是痛点，但“觉得热”不等于愿意付费。于是我把 600+ 份调研继续拆到强需求与支付意愿，最终识别出 82.09% 的痛点覆盖率与 45% 的强需求人群。</p>
+                            </section>
+                            <section class="story-block">
+                                <h4 data-zh="把技术变成产品" data-en="Turning technology into a product">把技术变成产品</h4>
+                                <p data-zh="团队从实验室薄膜转向更适合规模化的工业喷涂，并完成 50+ 人次真实场景测试。我同步设计先 B 端验证、再 C 端扩展的商业路径，推动项目进入国家科技园与 Z+ 科创营，并完成公司注册。" data-en="The team moved from laboratory film to a more scalable industrial spray process and completed 50+ real-world tests. In parallel, I designed a staged B2B-to-consumer path, secured incubation in the National Science Park and Z+ program, and advanced company registration.">团队从实验室薄膜转向更适合规模化的工业喷涂，并完成 50+ 人次真实场景测试。我同步设计先 B 端验证、再 C 端扩展的商业路径，推动项目进入国家科技园与 Z+ 科创营，并完成公司注册。</p>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="other-projects">
+                <div class="other-projects-heading">
+                    <span data-zh="其他项目" data-en="Other projects">其他项目</span>
+                    <i aria-hidden="true"></i>
+                    <small data-zh="仍在继续整理" data-en="Still taking shape">仍在继续整理</small>
+                </div>
+                <div class="mini-projects-grid">
+                    <article class="mini-project-card mini-project-card-ready fade-in">
+                        <span class="mini-project-index">01</span>
+                        <h3>X-Focus</h3>
+                        <p class="mini-project-subtitle" data-zh="从一台桌面设备出发，重新理解儿童专注力" data-en="Rethinking children’s attention through a desktop companion">从一台桌面设备出发，重新理解儿童专注力</p>
+                        <button class="deck-preview deck-preview-compact" type="button" data-deck="xfocus" aria-haspopup="dialog">
+                            <span class="deck-preview-image">
+                                <img src="images/decks/xfocus/slide-01.webp" alt="X-Focus 项目方案封面" loading="lazy">
+                                <span class="deck-page-badge" data-zh="共 12 页" data-en="12 pages">共 12 页</span>
+                            </span>
+                            <span class="deck-preview-action">
+                                <span>
+                                    <small data-zh="完整项目材料" data-en="Full presentation">完整项目材料</small>
+                                    <strong data-zh="在线翻阅 X-Focus 方案" data-en="Open the X-Focus deck">在线翻阅 X-Focus 方案</strong>
+                                </span>
+                                <span class="deck-open-pill">
+                                    <span data-zh="点击查看" data-en="View deck">点击查看</span>
+                                    <span aria-hidden="true">→</span>
+                                </span>
+                            </span>
+                        </button>
+                        <div class="mini-project-metrics">
+                            <span><strong>200+</strong><small data-zh="需求调研" data-en="responses">需求调研</small></span>
+                            <span><strong>4D</strong><small data-zh="专注力框架" data-en="attention model">专注力框架</small></span>
+                            <span><strong>159</strong><small data-zh="元定价方案" data-en="RMB price point">元定价方案</small></span>
+                        </div>
+                        <details class="project-story project-story-compact" open>
+                            <summary>
+                                <span data-zh="产品思考" data-en="Product thinking">产品思考</span>
+                                <span class="story-arrow" aria-hidden="true">＋</span>
+                            </summary>
+                            <div class="story-grid">
+                                <section class="story-block">
+                                    <h4 data-zh="先把专注力变得可理解" data-en="Making attention understandable">先把专注力变得可理解</h4>
+                                    <p data-zh="X-Focus 是“桌面陪伴硬件 × App”的儿童专注力评估方案。摄像头捕捉学习状态，数据传至云端分析，再在家长端生成报告；四维框架进一步把模糊的“孩子分心了”拆成分配、转移、广度与稳定性。" data-en="X-Focus combines a desktop companion device with an app for children’s attention assessment. A camera captures learning behaviour, cloud analysis turns it into parent-facing reports, and a four-dimensional model breaks the vague idea of distraction into distribution, shifting, breadth and stability.">X-Focus 是“桌面陪伴硬件 × App”的儿童专注力评估方案。摄像头捕捉学习状态，数据传至云端分析，再在家长端生成报告；四维框架进一步把模糊的“孩子分心了”拆成分配、转移、广度与稳定性。</p>
+                                </section>
+                                <section class="story-block">
+                                    <h4 data-zh="让检测之后仍然有用" data-en="Creating value after measurement">让检测之后仍然有用</h4>
+                                    <p data-zh="产品不止给出一次测评，而是连接 To Do List、实时专注数据、长期成长曲线、训练游戏与家长课程。我完成竞品拆解、PRD 和低保真原型，并在价格敏感与持续服务之间设计 159 元硬件入口与后续内容服务。" data-en="The product goes beyond a one-off test by connecting to-do routines, live attention data, long-term growth curves, training games and parent education. I developed the competitor analysis, PRD and low-fidelity prototype, pairing a RMB 159 hardware entry point with ongoing content services.">产品不止给出一次测评，而是连接 To Do List、实时专注数据、长期成长曲线、训练游戏与家长课程。我完成竞品拆解、PRD 和低保真原型，并在价格敏感与持续服务之间设计 159 元硬件入口与后续内容服务。</p>
+                                </section>
+                            </div>
+                        </details>
+                    </article>
+
+                    <article class="mini-project-card mini-project-card-ready fade-in">
+                        <span class="mini-project-index">02</span>
+                        <h3 data-zh="罗兰贝格 × 欧莱雅咨询比赛" data-en="Roland Berger × L'Oréal Consulting Competition">罗兰贝格 × 欧莱雅咨询比赛</h3>
+                        <p class="mini-project-subtitle" data-zh="为赫莲娜设计“AI 私人顾问 × 先锋女性圈层”的增长方案" data-en="An AI concierge and women’s leadership community growth strategy for Helena Rubinstein">为赫莲娜设计“AI 私人顾问 × 先锋女性圈层”的增长方案</p>
+                        <button class="deck-preview deck-preview-compact" type="button" data-deck="roland" aria-haspopup="dialog">
+                            <span class="deck-preview-image">
+                                <img src="images/decks/roland-loreal/slide-01.webp" alt="罗兰贝格 × 欧莱雅咨询比赛方案封面" loading="lazy">
+                                <span class="deck-page-badge" data-zh="共 8 页" data-en="8 pages">共 8 页</span>
+                            </span>
+                            <span class="deck-preview-action">
+                                <span>
+                                    <small data-zh="完整咨询方案" data-en="Full presentation">完整咨询方案</small>
+                                    <strong data-zh="在线翻阅 Future Masters 方案" data-en="Open the Future Masters deck">在线翻阅 Future Masters 方案</strong>
+                                </span>
+                                <span class="deck-open-pill">
+                                    <span data-zh="点击查看" data-en="View deck">点击查看</span>
+                                    <span aria-hidden="true">→</span>
+                                </span>
+                            </span>
+                        </button>
+                        <div class="mini-project-metrics">
+                            <span><strong>2</strong><small data-zh="个增长引擎" data-en="growth engines">个增长引擎</small></span>
+                            <span><strong>5</strong><small data-zh="层转化漏斗" data-en="funnel stages">层转化漏斗</small></span>
+                            <span><strong>6</strong><small data-zh="个月路线图" data-en="month roadmap">个月路线图</small></span>
+                        </div>
+                        <details class="project-story project-story-compact" open>
+                            <summary>
+                                <span data-zh="方案思路" data-en="Strategy">方案思路</span>
+                                <span class="story-arrow" aria-hidden="true">＋</span>
+                            </summary>
+                            <div class="story-grid">
+                                <section class="story-block">
+                                    <h4 data-zh="从“卖产品”转向“经营关系”" data-en="From product sales to relationship building">从“卖产品”转向“经营关系”</h4>
+                                    <p data-zh="团队判断，高端美妆进入存量竞争后，赫莲娜的机会不再是触达更多人，而是长期理解高势能女性。方案用 AI Skin Concierge 管理皮肤状态，用 Future Masters Circle 连接身份、资源与成长。" data-en="Our team argued that in a slower luxury market, Helena Rubinstein’s opportunity was not broader reach but deeper relationships with high-potential women. AI Skin Concierge manages skin condition, while Future Masters Circle connects identity, resources and growth.">团队判断，高端美妆进入存量竞争后，赫莲娜的机会不再是触达更多人，而是长期理解高势能女性。方案用 AI Skin Concierge 管理皮肤状态，用 Future Masters Circle 连接身份、资源与成长。</p>
+                                </section>
+                                <section class="story-block">
+                                    <h4 data-zh="把概念落到增长路径" data-en="Turning the idea into a growth path">把概念落到增长路径</h4>
+                                    <p data-zh="两套引擎共享统一用户档案，并被组织进“内容触达—AI 测评—进入圈层—产品购买—核心会员”的五层漏斗。团队同时设计了六个月、三阶段的试点路线，以及隐私、AI 建议边界、柜台执行和品牌调性的风险指标。" data-en="The two engines share one customer profile and feed a five-stage journey from content reach and AI assessment to community entry, purchase and core membership. The team also designed a six-month, three-phase pilot with controls for privacy, AI-advice boundaries, in-store execution and brand tone.">两套引擎共享统一用户档案，并被组织进“内容触达—AI 测评—进入圈层—产品购买—核心会员”的五层漏斗。团队同时设计了六个月、三阶段的试点路线，以及隐私、AI 建议边界、柜台执行和品牌调性的风险指标。</p>
+                                </section>
+                            </div>
+                        </details>
+                    </article>
+
+                    <article class="mini-project-card fade-in">
+                        <span class="mini-project-index">03</span>
+                        <h3 data-zh="ABC 美好咨询社" data-en="ABC Social Impact Consulting">ABC 美好咨询社</h3>
+                        <p class="mini-project-subtitle" data-zh="公益咨询项目" data-en="Pro-bono consulting project">公益咨询项目</p>
+                        <div class="project-placeholder-note">
+                            <span aria-hidden="true">＋</span>
+                            <p data-zh="项目内容待补充" data-en="Project details to come">项目内容待补充</p>
+                        </div>
+                    </article>
+
+                    <article class="mini-project-card fade-in">
+                        <span class="mini-project-index">04</span>
+                        <h3 data-zh="Vibe Coding 项目" data-en="Vibe Coding Project">Vibe Coding 项目</h3>
+                        <p class="mini-project-subtitle" data-zh="持续记录我用 AI 把想法做成产品的过程" data-en="Experiments in turning ideas into products with AI">持续记录我用 AI 把想法做成产品的过程</p>
+                        <div class="project-placeholder-note">
+                            <span aria-hidden="true">＋</span>
+                            <p data-zh="项目内容待补充" data-en="Project details to come">项目内容待补充</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section id="campus" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-zh="校园经历" data-en="Campus">校园经历</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <div class="campus-card fade-in">
+                <div class="campus-header">
+                    <div>
+                        <h3 data-zh="浙江大学启真交叉学科创新创业实验室（X-Lab）" data-en="Zhejiang University Qizhen Interdisciplinary Innovation & Entrepreneurship Lab (X-Lab)">浙江大学启真交叉学科创新创业实验室（X-Lab）</h3>
+                        <p class="campus-role" data-zh="实习成员 → 正式成员 → 运营管培生 → 财务负责人" data-en="Intern → Member → Operations Trainee → Finance Lead">实习成员 → 正式成员 → 运营管培生 → 财务负责人</p>
+                    </div>
+                    <span class="campus-date" data-zh="2025.04 — 至今" data-en="2025.04 — Present">2025.04 &ndash; 至今</span>
+                </div>
+                <p class="project-lede" data-zh="这不是一次直接的职务跳转。我先经历实习期，成为正式成员后继续参与项目与事务性工作，再成为管培生和财务负责人；每一步都来自前一阶段真实的协作与交付。" data-en="This was not a direct jump into a title. I completed an internship, became a formal member, continued taking on project and operational work, and only then moved into trainee and finance-lead responsibilities.">这不是一次直接的职务跳转。我先经历实习期，成为正式成员后继续参与项目与事务性工作，再成为管培生和财务负责人；每一步都来自前一阶段真实的协作与交付。</p>
+                <div class="growth-path" aria-label="X-Lab 成长路径">
+                    <span data-zh="实习期 · 学习方法" data-en="Internship · Learn">实习期 · 学习方法</span>
+                    <i aria-hidden="true">→</i>
+                    <span data-zh="正式成员 · 项目实践" data-en="Member · Build">正式成员 · 项目实践</span>
+                    <i aria-hidden="true">→</i>
+                    <span data-zh="管培生 · 推进运营" data-en="Trainee · Operate">管培生 · 推进运营</span>
+                    <i aria-hidden="true">→</i>
+                    <span data-zh="财务负责人 · 建立规范" data-en="Finance Lead · Systemize">财务负责人 · 建立规范</span>
+                </div>
+                <div class="project-metrics">
+                    <span class="story-metric"><strong>4</strong><small data-zh="段成长角色" data-en="growth stages">段成长角色</small></span>
+                    <span class="story-metric"><strong data-zh="多领域" data-en="Multi-sector">多领域</strong><small data-zh="商业实践" data-en="business practice">商业实践</small></span>
+                    <span class="story-metric"><strong>4 万+</strong><small data-zh="现金流管理" data-en="cash flow managed">现金流管理</small></span>
+                </div>
+                <details class="project-story" open>
+                    <summary>
+                        <span data-zh="这段校园经历" data-en="About this experience">这段校园经历</span>
+                        <span class="story-arrow" aria-hidden="true">＋</span>
+                    </summary>
+                    <div class="story-grid">
+                        <section class="story-block">
+                            <h4 data-zh="先从真实项目里学习" data-en="Learning through real projects">先从真实项目里学习</h4>
+                            <p data-zh="实习期到正式成员阶段，我深度参与 X-Focus 的市场调研、用户画像、功能拓展与方案汇报，也完成贝恩杯 AI in ESG、植物奶营销和即时零售商业模式等练习。相比只听方法论，我更早开始在资料搜集、产业链分析、产品文档和英文方案中反复验证它。"
+                               data-en="From intern to formal member, I worked on X-Focus market research, personas, feature expansion and presentations, alongside exercises in AI for ESG, plant-milk marketing and instant retail. The work made research, industry analysis, product documentation and consulting frameworks tangible.">实习期到正式成员阶段，我深度参与 X-Focus 的市场调研、用户画像、功能拓展与方案汇报，也完成贝恩杯 AI in ESG、植物奶营销和即时零售商业模式等练习。相比只听方法论，我更早开始在资料搜集、产业链分析、产品文档和英文方案中反复验证它。</p>
+                        </section>
+                        <section class="story-block">
+                            <h4 data-zh="从完成任务到支撑组织" data-en="From delivery to supporting the organization">从完成任务到支撑组织</h4>
+                            <p data-zh="成为管培生后，我开始同时处理硬科技项目孵化、训练营招生与运营、全员大会和团队支持等多线程事务：拆解任务、协调不同角色，并在现场变化中及时补位。跟进辐射制冷项目，也让我把产品与商业判断延伸到硬科技孵化。"
+                               data-en="As an operations trainee, I began balancing hard-tech incubation, program recruitment and operations, lab-wide events and team support—breaking down work, coordinating roles and responding to change on site. Following the radiative-cooling venture also extended my product thinking into hard-tech commercialization.">成为管培生后，我开始同时处理硬科技项目孵化、训练营招生与运营、全员大会和团队支持等多线程事务：拆解任务、协调不同角色，并在现场变化中及时补位。跟进辐射制冷项目，也让我把产品与商业判断延伸到硬科技孵化。</p>
+                        </section>
+                        <section class="story-block story-block-wide finance-story">
+                            <h4 data-zh="把财务规则变成团队可以执行的系统" data-en="Turning finance rules into an executable system">把财务规则变成团队可以执行的系统</h4>
+                            <p data-zh="成为财务负责人后，我负责月度现金流与预算记录，核验发票、订单、支付与行程材料，并把合规边界、PDF 规范和常见问题整理成审核清单；在审批系统中给出明确的通过或驳回理由，同时向各部门同步规则变化、与学校财务对接预算及系统问题。它训练的不只是细致，而是把复杂要求变成可复用流程的能力。"
+                               data-en="As finance lead, I manage monthly cash flow and budget records, verify invoices, orders, payments and itineraries, and translate compliance boundaries and document standards into a review checklist. I give clear approval or rejection reasons, align departments on rule changes and coordinate budget and system issues with university finance—turning complexity into a reusable process.">成为财务负责人后，我负责月度现金流与预算记录，核验发票、订单、支付与行程材料，并把合规边界、PDF 规范和常见问题整理成审核清单；在审批系统中给出明确的通过或驳回理由，同时向各部门同步规则变化、与学校财务对接预算及系统问题。它训练的不只是细致，而是把复杂要求变成可复用流程的能力。</p>
+                        </section>
+                    </div>
+                </details>
+            </div>
+
+            <div class="campus-card fade-in">
+                <div class="campus-header">
+                    <div>
+                        <h3 data-zh="浙江大学经济学院新媒体宣传中心" data-en="New Media &amp; Communications Center, Zhejiang University School of Economics">浙江大学经济学院新媒体宣传中心</h3>
+                        <p class="campus-role" data-zh="宣传部成员 → 负责人" data-en="Publicity Member → Lead">宣传部成员 → 负责人</p>
+                    </div>
+                    <span class="campus-date" data-zh="2024.09 — 2025.06" data-en="2024.09 — 2025.06">2024.09 — 2025.06</span>
+                </div>
+                <p class="project-lede" data-zh="从自己做内容，到带一支 10+ 人的团队一起讲好学院的故事。这段经历让我学会在审美、信息准确与传播效率之间做选择。" data-en="I moved from producing content myself to leading a team of 10+ people in telling the School’s stories, learning to balance aesthetics, accuracy and communication efficiency.">从自己做内容，到带一支 10+ 人的团队一起讲好学院的故事。这段经历让我学会在审美、信息准确与传播效率之间做选择。</p>
+                <div class="project-metrics">
+                    <span class="story-metric"><strong>10+</strong><small data-zh="团队成员" data-en="team members">团队成员</small></span>
+                    <span class="story-metric"><strong>数十篇</strong><small data-zh="推文与视频" data-en="posts & videos">推文与视频</small></span>
+                    <span class="story-metric"><strong data-zh="部门之星" data-en="Team award">部门之星</strong><small data-zh="团队荣誉" data-en="recognition">团队荣誉</small></span>
+                </div>
+                <details class="project-story" open>
+                    <summary>
+                        <span data-zh="这段校园经历" data-en="About this experience">这段校园经历</span>
+                        <span class="story-arrow" aria-hidden="true">＋</span>
+                    </summary>
+                    <div class="story-grid">
+                        <section class="story-block">
+                            <h4 data-zh="内容与现场" data-en="Content and live moments">内容与现场</h4>
+                            <p data-zh="我参与“经声经视”“经津有味”等栏目，从资料整理、选题结构到视觉呈现完成数十篇推文与视频，也承担新生晚会、游园会等活动的宣传设计与现场协同。"
+                               data-en="I contributed to recurring editorial columns, shaping research, story structure and visuals across dozens of posts and videos, while also supporting campaign design and on-site communication for major student events.">我参与“经声经视”“经津有味”等栏目，从资料整理、选题结构到视觉呈现完成数十篇推文与视频，也承担新生晚会、游园会等活动的宣传设计与现场协同。</p>
+                        </section>
+                        <section class="story-block">
+                            <h4 data-zh="从执行到带队" data-en="From execution to leadership">从执行到带队</h4>
+                            <p data-zh="成为负责人后，我带领 10+ 人团队安排选题、分工和审核节奏。团队最终获得“部门之星”，对我而言更重要的是形成了一套大家都能顺畅协作的内容流程。" data-en="As lead, I coordinated topics, ownership and review rhythms across a team of 10+. The group was recognized with a departmental award, but the more meaningful outcome was a content process everyone could work within smoothly.">成为负责人后，我带领 10+ 人团队安排选题、分工和审核节奏。团队最终获得“部门之星”，对我而言更重要的是形成了一套大家都能顺畅协作的内容流程。</p>
+                        </section>
+                    </div>
+                </details>
+                <div class="article-links" aria-label="代表内容作品">
+                    <a href="https://mp.weixin.qq.com/s/4-MK-dcM9l-BJr0rKok2ag">
+                        <small data-zh="经声经视" data-en="Economics Explained">经声经视</small>
+                        <strong data-zh="读懂企业年报" data-en="Reading Annual Reports">读懂企业年报</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/OrvDcF1MRem1mNgcWWmnjA">
+                        <small data-zh="经声经视" data-en="Economics Explained">经声经视</small>
+                        <strong data-zh="农村物流观察" data-en="Rural Logistics">农村物流观察</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/8oApxpOOdPt2uL2ooDcDnA">
+                        <small data-zh="经津有味" data-en="Campus Lifestyle">经津有味</small>
+                        <strong data-zh="春日赏花图鉴" data-en="Spring Flower Guide">春日赏花图鉴</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/pgOIZrA0iSD4eBp4ri1zcA">
+                        <small data-zh="节日策划" data-en="Festival Campaign">节日策划</small>
+                        <strong data-zh="方言贺岁" data-en="New Year in Dialects">方言贺岁</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors & Skills Section -->
+    <section id="honors" class="section">
+        <div class="container">
+            <h2 class="section-title" data-zh="荣誉奖励与技能证书" data-en="Honors & Skills">荣誉奖励与技能证书</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <div class="honors-skills">
+                <div class="honors-section fade-in">
+                    <h3 class="subsection-title" data-zh="荣誉奖励" data-en="Honors">荣誉奖励</h3>
+                    <div class="honors-list">
+                        <span class="honor-badge" data-zh="浙大丹青学园优秀团员" data-en="Outstanding Youth League Member, Danqing College">浙大丹青学园优秀团员</span>
+                        <span class="honor-badge" data-zh="青苗杯创赛金奖" data-en="Gold Award, Qingmiao Innovation Competition">青苗杯创赛金奖</span>
+                        <span class="honor-badge" data-zh="蒲公英创新大赛银奖" data-en="Silver Award, Dandelion Innovation Competition">蒲公英创新大赛银奖</span>
+                        <span class="honor-badge" data-zh="浙大五星级志愿者" data-en="Five-Star Volunteer, Zhejiang University">浙大五星级志愿者</span>
+                    </div>
+                </div>
+
+                <div class="skills-section fade-in">
+                    <h3 class="subsection-title" data-zh="技能证书" data-en="Skills & Certifications">技能证书</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 data-zh="语言" data-en="Language">语言</h4>
+                            <p>CET-4 / 660+</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-zh="产品工具" data-en="Product">产品工具</h4>
+                            <p data-zh="Figma · 墨刀 · XMind · 飞书 · PPT" data-en="Figma · MockingBot · XMind · Feishu · PowerPoint">Figma &middot; 墨刀 &middot; XMind &middot; 飞书 &middot; PPT</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-zh="AI 工具" data-en="AI Tools">AI 工具</h4>
+                            <p>GPT &middot; Claude Code &middot; Lovable</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-zh="数据工具" data-en="Data">数据工具</h4>
+                            <p>Excel &middot; SQL &middot; Python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- In-page presentation viewer -->
+    <div class="deck-modal" id="deck-viewer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="deck-viewer-title">
+        <button class="deck-backdrop" type="button" data-deck-close aria-label="关闭演示文稿"></button>
+        <div class="deck-dialog">
+            <header class="deck-toolbar">
+                <div class="deck-heading">
+                    <span class="deck-eyebrow" data-zh="在线材料" data-en="Presentation">在线材料</span>
+                    <h2 id="deck-viewer-title">项目材料</h2>
+                </div>
+                <div class="deck-toolbar-actions">
+                    <span class="deck-counter" aria-live="polite">01 / 01</span>
+                    <button class="deck-close" type="button" data-deck-close>
+                        <span data-zh="关闭" data-en="Close">关闭</span>
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </header>
+            <div class="deck-stage">
+                <button class="deck-nav deck-prev" type="button" aria-label="上一页">←</button>
+                <div class="deck-canvas">
+                    <img class="deck-slide-image" src="" alt="">
+                    <div class="deck-loading" aria-hidden="true" data-zh="正在加载…" data-en="Loading…">正在加载…</div>
+                </div>
+                <button class="deck-nav deck-next" type="button" aria-label="下一页">→</button>
+            </div>
+            <footer class="deck-footer">
+                <div class="deck-progress" aria-hidden="true"><span></span></div>
+                <p data-zh="左右滑动、点击箭头，或使用键盘方向键翻页" data-en="Swipe, use the arrows, or press the keyboard arrow keys">左右滑动、点击箭头，或使用键盘方向键翻页</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 data-zh="陈昕慧" data-en="Chen Xinhui">陈昕慧</h3>
+                    <p data-zh="浙江大学 · 经济学" data-en="Zhejiang University · Economics">浙江大学 &middot; 经济学</p>
+                </div>
+                <div class="footer-contact">
+                    <p>15060718330</p>
+                    <p>599409315@qq.com</p>
+                </div>
+                <div class="footer-bottom">
+                    <p data-zh="© 2026 陈昕慧" data-en="© 2026 Chen Xinhui">&copy; 2026 陈昕慧</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

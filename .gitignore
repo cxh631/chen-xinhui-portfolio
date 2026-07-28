@@ -1,0 +1,13 @@
+*
+!.gitignore
+!.nojekyll
+!README.md
+!index.html
+!css/
+!css/**
+!js/
+!js/**
+!images/
+!images/**
+**/.DS_Store
+images/*.svg
