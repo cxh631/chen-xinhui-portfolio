@@ -1196,6 +1196,23 @@ h1, h2, h3, h4 {
     margin-top: 16px;
 }
 
+.project-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 14px 0 4px;
+}
+
+.project-keywords span {
+    padding: 4px 9px;
+    border: 1px solid rgba(93, 140, 106, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 252, 247, 0.66);
+    color: var(--accent-deep);
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+}
+
 .story-metric {
     display: inline-flex;
     align-items: baseline;
