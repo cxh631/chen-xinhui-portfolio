@@ -66,6 +66,15 @@ if (activeView !== 'all') {
 
     function updatePageControls(index) {
         currentPage = Math.max(0, Math.min(index, panels.length - 1));
+        panels.forEach((panel, panelIndex) => {
+            const state = panelIndex < currentPage
+                ? 'past'
+                : panelIndex > currentPage
+                    ? 'future'
+                    : 'active';
+            panel.dataset.panelState = state;
+            panel.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+        });
         if (pageCount) {
             pageCount.textContent = `${String(currentPage + 1).padStart(2, '0')} / ${String(panels.length).padStart(2, '0')}`;
         }
@@ -75,23 +84,44 @@ if (activeView !== 'all') {
 
     function goToPage(index, behavior = 'smooth') {
         const targetIndex = Math.max(0, Math.min(index, panels.length - 1));
-        pageTrack.scrollTo({
-            left: targetIndex * pageTrack.clientWidth,
-            behavior
-        });
+        if (behavior === 'auto') {
+            pageTrack.classList.add('page-track-no-transition');
+        }
         updatePageControls(targetIndex);
+        if (behavior === 'auto') {
+            window.requestAnimationFrame(() => pageTrack.classList.remove('page-track-no-transition'));
+        }
     }
 
     previousPage?.addEventListener('click', () => goToPage(currentPage - 1));
     nextPage?.addEventListener('click', () => goToPage(currentPage + 1));
 
-    let pageScrollFrame = null;
-    pageTrack.addEventListener('scroll', () => {
-        if (pageScrollFrame) return;
-        pageScrollFrame = window.requestAnimationFrame(() => {
-            updatePageControls(Math.round(pageTrack.scrollLeft / Math.max(pageTrack.clientWidth, 1)));
-            pageScrollFrame = null;
-        });
+    let horizontalWheelLocked = false;
+    pageTrack.addEventListener('wheel', event => {
+        if (Math.abs(event.deltaX) < 38 || Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+        event.preventDefault();
+        if (horizontalWheelLocked) return;
+        horizontalWheelLocked = true;
+        goToPage(currentPage + (event.deltaX > 0 ? 1 : -1));
+        window.setTimeout(() => {
+            horizontalWheelLocked = false;
+        }, 620);
+    }, { passive: false });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    pageTrack.addEventListener('touchstart', event => {
+        const touch = event.changedTouches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+    }, { passive: true });
+    pageTrack.addEventListener('touchend', event => {
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - touchStartX;
+        const deltaY = touch.clientY - touchStartY;
+        if (Math.abs(deltaX) > 64 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+            goToPage(currentPage + (deltaX < 0 ? 1 : -1));
+        }
     }, { passive: true });
 
     document.querySelectorAll('a[href*="view="]').forEach(link => {

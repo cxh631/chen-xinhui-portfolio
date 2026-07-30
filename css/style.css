@@ -3331,30 +3331,52 @@ body.horizontal-view {
 }
 
 .page-track {
-    display: flex;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-}
-
-.page-track::-webkit-scrollbar {
-    display: none;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 .page-panel {
-    flex: 0 0 100vw;
+    position: absolute;
+    inset: 0;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-snap-align: start;
     background-attachment: scroll;
     overscroll-behavior: contain;
     scrollbar-width: thin;
     scrollbar-color: rgba(93, 140, 106, 0.28) transparent;
+    backface-visibility: hidden;
+    contain: layout paint;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform 0.62s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.38s ease;
+}
+
+.page-panel[data-panel-state="past"] {
+    z-index: 1;
+    transform: translateX(-100%);
+}
+
+.page-panel[data-panel-state="active"] {
+    z-index: 2;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+}
+
+.page-panel[data-panel-state="future"] {
+    z-index: 1;
+    transform: translateX(100%);
+}
+
+.page-track-no-transition .page-panel {
+    transition: none;
 }
 
 .horizontal-view .page-panel {
@@ -3362,6 +3384,7 @@ body.horizontal-view {
     background-repeat: no-repeat;
     background-position: center, center;
     background-size: cover, contain;
+    image-rendering: auto;
 }
 
 .horizontal-view .page-panel[data-page="home"] {
@@ -3380,7 +3403,6 @@ body.horizontal-view {
     background-image:
         linear-gradient(rgba(247, 250, 236, 0.36), rgba(247, 250, 236, 0.46)),
         url('../images/backgrounds/experience-original.png');
-    background-size: cover, min(100vw, 1672px) auto;
 }
 
 .horizontal-view .page-panel[data-page="projects"] {
@@ -3393,7 +3415,6 @@ body.horizontal-view {
     background-image:
         linear-gradient(rgba(238, 248, 244, 0.34), rgba(238, 248, 244, 0.45)),
         url('../images/backgrounds/campus-original.png');
-    background-size: cover, min(100vw, 1672px) auto;
 }
 
 .horizontal-view .page-panel[data-page="life"] {
@@ -3414,6 +3435,16 @@ body.horizontal-view {
 
 .page-panel > .section {
     min-height: 100vh;
+}
+
+.horizontal-view .page-panel > .section {
+    /*
+     * Section cards used a backdrop blur in the old vertical layout. In the
+     * horizontal layout the illustration lives on the parent panel, so that
+     * same rule blurred the entire full-resolution background.
+     */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
 }
 
 .horizontal-view .page-panel[data-page="education"] > #about {
